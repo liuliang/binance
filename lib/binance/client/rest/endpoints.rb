@@ -1,4 +1,3 @@
-
 module Binance
   module Client
     class REST
@@ -7,7 +6,6 @@ module Binance
         ping:              'v1/ping',
         time:              'v1/time',
         exchange_info:     'v1/exchangeInfo',
-        products:          '/exchange/public/products',
         depth:             'v1/depth',
         trades:            'v1/trades',
         historical_trades: 'v1/historicalTrades',
@@ -33,7 +31,8 @@ module Binance
         deposit_address:  'v3/depositAddress.html',
         account_status:   'v3/accountStatus.html',
         system_status:    'v3/systemStatus.html',
-        withdraw_fee:     'v3/withdrawFee.html'
+        withdraw_fee:     'v3/withdrawFee.html',
+        dust_log:         'v3/userAssetDribbletLog.html'
       }.freeze
     end
   end

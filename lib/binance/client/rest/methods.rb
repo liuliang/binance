@@ -1,4 +1,3 @@
-
 module Binance
   module Client
     class REST
@@ -13,9 +12,6 @@ module Binance
         # #exchange_info
         { name: :exchange_info, client: :public,
           action: :get, endpoint: :exchange_info },
-        # #products
-        { name: :products, client: :public,
-          action: :get, endpoint: :products },
         # #depth
         { name: :depth, client: :public,
           action: :get, endpoint: :depth },
@@ -36,6 +32,9 @@ module Binance
           action: :get, endpoint: :twenty_four_hour },
         # #price
         { name: :price, client: :public,
+          action: :get, endpoint: :price },
+        # #all_prices
+        { name: :all_prices, client: :public,
           action: :get, endpoint: :price },
         # #book_ticker
         { name: :book_ticker, client: :public,
@@ -97,7 +96,10 @@ module Binance
           action: :get, endpoint: :system_status },
         # #withdraw_fee
         { name: :withdraw_fee, client: :withdraw,
-          action: :get, endpoint: :withdraw_fee }
+          action: :get, endpoint: :withdraw_fee },
+        # dust_log
+        { name: :dust_log, client: :withdraw,
+          action: :get, endpoint: :dust_log }
       ].freeze
     end
   end
